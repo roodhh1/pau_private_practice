@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Paulina Lebrija — Bilingual Mental Health Guidance &amp; Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f7f4ef;
+    --bg-sage:#eef2ee;
+    --green:#3f6151;
+    --green-d:#33503f;
+    --clay:#bd7d5e;
+    --ink:#232b27;
+    --muted:#6b756e;
+    --line:#e7e2d9;
+    --line-soft:#eee9e1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.01em}
+  a{text-decoration:none;color:inherit}
+  .mock{background:var(--ink);color:#e9e3d8;text-align:center;font-size:12px;letter-spacing:.4px;padding:7px 12px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--green-d)}
+  .brand i{font-style:normal;color:var(--clay)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:15px;color:var(--ink);opacity:.8}
+  .nav-links a:hover{opacity:1;color:var(--green)}
+  .lang{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:5px 12px}
+  .book{background:var(--green);color:#fff !important;padding:11px 22px;border-radius:30px;font-size:14.5px;font-weight:500;opacity:1 !important}
+  .book:hover{background:var(--green-d)}
+  @media(max-width:880px){.nav-links a:not(.book),.lang{display:none}}
+
+  /* HERO */
+  .hero{padding:92px 0 84px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .tagline{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:var(--green);background:var(--bg-sage);padding:7px 15px;border-radius:30px;margin-bottom:26px}
+  .tagline .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+  .hero h1{font-size:clamp(36px,4.8vw,55px);margin-bottom:24px;color:var(--ink)}
+  .hero h1 em{font-style:italic;color:var(--green)}
+  .hero .lead{font-size:19px;color:var(--muted);max-width:500px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .btn{font-family:'Inter',sans-serif;font-size:15.5px;font-weight:500;padding:15px 30px;border-radius:32px;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:9px}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-primary:hover{background:var(--green-d)}
+  .btn-text{color:var(--ink);font-weight:500;padding:15px 6px}
+  .btn-text:hover{color:var(--green)}
+  .btn-text svg{vertical-align:-2px}
+
+  .figure{position:relative;justify-self:center;width:100%;max-width:420px}
+  .figure .photo{aspect-ratio:4/5;border-radius:20px;background:radial-gradient(120% 90% at 70% 15%, #f3ece1 0%, #e7ddcd 45%, #d9cbb6 100%);border:1px solid var(--line);position:relative}
+  .figure .photo .mark{font-family:'Fraunces',serif;font-size:120px;color:#fff;opacity:.5;position:absolute;top:50%;left:50%;transform:translate(-50%,-55%)}
+  .figure .photo .cap{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.9);font-size:12px;color:var(--muted);padding:5px 11px;border-radius:20px}
+  .figure .card{position:absolute;bottom:-22px;right:-18px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;box-shadow:0 18px 40px rgba(60,80,60,.12);text-align:left}
+  .figure .card b{font-family:'Fraunces',serif;font-size:24px;color:var(--green);display:block}
+  .figure .card span{font-size:12.5px;color:var(--muted)}
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:54px}.hero .lead{margin-left:auto;margin-right:auto}.hero{text-align:center}.hero-cta{justify-content:center}.figure .card{right:8px}}
+
+  /* TRUST STRIP */
+  .strip{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--bg-soft)}
+  .strip-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:34px 0}
+  .stat{flex:1;min-width:160px;text-align:center}
+  .stat b{font-family:'Fraunces',serif;font-size:30px;color:var(--ink);display:block;font-weight:600}
+  .stat span{font-size:13.5px;color:var(--muted)}
+
+  section{padding:100px 0}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px}
+  h2.title{font-size:clamp(30px,3.6vw,42px);max-width:640px;margin-bottom:22px}
+  .intro-lead{font-size:18px;color:var(--muted);max-width:640px}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .about .body p{color:var(--muted);margin-bottom:18px}
+  .about .body p strong{color:var(--ink);font-weight:600}
+  .cred{background:var(--bg-soft);border:1px solid var(--line);border-radius:20px;padding:34px}
+  .cred h3{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+  .cred ul{list-style:none}
+  .cred li{padding:15px 0;border-top:1px solid var(--line);font-size:15px}
+  .cred li:first-child{border-top:none;padding-top:0}
+  .cred li b{display:block;color:var(--ink);font-weight:600}
+  .cred li span{font-size:13.5px;color:var(--muted)}
+  @media(max-width:880px){.about{grid-template-columns:1fr;gap:40px}}
+
+  /* SERVICES (individuals) */
+  .services{background:var(--bg-soft)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:46px}
+  .svc{background:#fff;padding:38px 32px;transition:background .2s}
+  .svc:hover{background:var(--bg-sage)}
+  .svc .ico{width:46px;height:46px;border-radius:12px;background:var(--bg-sage);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .svc .ico svg{width:23px;height:23px;stroke:var(--green);fill:none;stroke-width:1.6}
+  .svc h3{font-size:19px;margin-bottom:10px}
+  .svc p{font-size:15px;color:var(--muted)}
+  .svc-note{margin-top:26px;font-size:13.5px;color:var(--muted);max-width:720px}
+  @media(max-width:880px){.svc-grid{grid-template-columns:1fr}}
+
+  /* APPROACH */
+  .approach{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+  .steps{display:flex;flex-direction:column;gap:4px}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:26px 0;border-top:1px solid var(--line)}
+  .step:first-child{border-top:none}
+  .step .num{font-family:'Fraunces',serif;font-size:22px;color:var(--clay);width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:19px;margin-bottom:6px}
+  .step p{font-size:15px;color:var(--muted)}
+  @media(max-width:880px){.approach{grid-template-columns:1fr;gap:40px}}
+
+  /* FOR ORGANIZATIONS */
+  .orgs{background:var(--green);color:#f3efe7}
+  .orgs-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .orgs .eyebrow{color:#d7b79f}
+  .orgs h2.title{color:#fff}
+  .orgs p.intro-lead{color:#dfe6df}
+  .orgs .btn-light{background:#fff;color:var(--green-d);margin-top:30px}
+  .org-list{list-style:none;display:grid;gap:2px}
+  .org-list li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:18px 0;border-top:1px solid rgba(255,255,255,.16)}
+  .org-list li:first-child{border-top:none}
+  .org-list .ti{font-family:'Fraunces',serif;font-size:18px;color:#fff;display:block;margin-bottom:2px}
+  .org-list .de{font-size:14px;color:#d6ded6}
+  .org-list .bullet{width:9px;height:9px;border-radius:50%;background:#e7c8a3;margin-top:9px}
+  @media(max-width:880px){.orgs-grid{grid-template-columns:1fr;gap:40px}}
+
+  /* TESTIMONIALS */
+  .reviews{background:var(--bg)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+  .rev{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:30px}
+  .rev .stars{color:var(--clay);letter-spacing:2px;font-size:14px;margin-bottom:14px}
+  .rev p{font-family:'Fraunces',serif;font-size:18px;line-height:1.45;font-style:italic;margin-bottom:18px;color:var(--ink)}
+  .rev .who{font-size:13.5px;color:var(--muted)}
+  .rev-foot{margin-top:34px;font-size:14.5px;color:var(--muted)}
+  @media(max-width:880px){.rev-grid{grid-template-columns:1fr}}
+
+  /* FINAL CTA */
+  .final{background:var(--bg-soft);text-align:center}
+  .final-card{max-width:780px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:62px 40px}
+  .final h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:18px}
+  .final p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+  .final .or{display:block;margin-top:22px;font-size:14.5px;color:var(--muted)}
+  .final .or a{color:var(--green);font-weight:600}
+  .final small{display:block;margin-top:18px;color:var(--muted);font-size:13px}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#cfc8bd;padding:54px 0 40px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:flex-start}
+  footer .brand{color:#fff}
+  footer p{font-size:13.5px;line-height:1.8;opacity:.82}
+  footer .links{display:flex;gap:22px;font-size:14px}
+  footer .links a{color:#e7c8a3}
+  .foot-rule{border:none;border-top:1px solid rgba(255,255,255,.12);margin:34px 0 18px}
+  .foot-fine{font-size:12px;opacity:.6;max-width:760px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="mock">WEBSITE MOCKUP — concept draft. Imagery is placeholder; all copy is editable.</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brand">Dr. Paulina Lebrija<i>.</i></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">How I help</a>
+      <a href="#approach">Approach</a>
+      <a href="#orgs">For organizations</a>
+      <span class="lang">EN · ES</span>
+      <a href="#book" class="book">Book a consultation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tagline"><span class="dot"></span> Online · Spanish &amp; English · United States</span>
+      <h1>Make sense of your mental health — <em>in your language</em>.</h1>
+      <p class="lead">I'm a neuropsychiatrist offering bilingual, non-prescribing consultations and guidance for adults across the U.S. — helping you understand anxiety, ADHD, stress, and difficult diagnoses, and feel steady about your next step.</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-primary">Book a consultation</a>
+        <a href="#orgs" class="btn-text">For organizations
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="figure">
+      <div class="photo">
+        <div class="mark">PL</div>
+        <div class="cap">Professional photo</div>
+      </div>
+      <div class="card"><b>10+ yrs</b><span>Clinical expertise</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap strip-in">
+    <div class="stat"><b>Neuropsychiatry</b><span>High-specialty trained</span></div>
+    <div class="stat"><b>INNN · UNAM</b><span>Mexico's top institutions</span></div>
+    <div class="stat"><b>3 languages</b><span>Spanish · English · French</span></div>
+    <div class="stat"><b>100% online</b><span>Secure video, nationwide</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2 class="title">A medical specialist's depth, offered as guidance.</h2>
+      <div class="body">
+        <p>I'm <strong>Dr. Paulina Lebrija</strong>, a physician and psychiatrist with a high specialty in <strong>neuropsychiatry</strong>, trained at Mexico's National Institute of Neurology and Neurosurgery and UNAM, with over a decade of clinical experience.</p>
+        <p>Now based in the San Francisco Bay Area, I work with people across the U.S. in a <strong>non-prescribing capacity</strong> — helping you understand what you're experiencing, make sense of a diagnosis, manage stress and emotions, and navigate your options with confidence.</p>
+        <p>Think of me as an expert guide and educator who listens. For medication or formal treatment you'll always work with a licensed local provider; <strong>my role is to help you feel informed, steady, and supported</strong> — in Spanish or English.</p>
+      </div>
+    </div>
+    <aside class="cred">
+      <h3>Training &amp; Credentials</h3>
+      <ul>
+        <li><b>Doctor of Medicine — UNAM</b><span>Médico Cirujano, Mexico</span></li>
+        <li><b>Specialty in Psychiatry — UNAM</b><span>Mexico</span></li>
+        <li><b>High Specialty in Neuropsychiatry</b><span>Instituto Nacional de Neurología y Neurocirugía</span></li>
+        <li><b>Advanced Training — UCM Madrid</b><span>Psychopathology of Emotions, Stress &amp; Health</span></li>
+        <li><b>Published Researcher</b><span>Alzheimer's &amp; Dementia journal</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- SERVICES (individuals) -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="eyebrow">For you</div>
+    <h2 class="title">Ways I can help</h2>
+    <p class="intro-lead">Educational, supportive consultations — built around understanding, not prescriptions.</p>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>Understand your diagnosis</h3>
+        <p>Make sense of anxiety, depression, ADHD, or a neuropsychiatric condition — explained clearly, in plain language.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Stress &amp; emotional regulation</h3>
+        <p>Practical, counseling-oriented guidance for overwhelm, burnout, and life transitions.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
+        <h3>Second opinions &amp; navigation</h3>
+        <p>A thoughtful review of your situation and help navigating the U.S. mental-health system.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>Adult ADHD guidance</h3>
+        <p>Understand how ADHD shows up for you, with strategies for focus and emotional regulation.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Caregiver &amp; family support</h3>
+        <p>Guidance for families facing dementia and neuropsychiatric change in a loved one.</p>
+      </div>
+      <div class="svc">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Bilingual &amp; bicultural</h3>
+        <p>Support in Spanish or English, with someone who understands both cultures and how they shape care.</p>
+      </div>
+    </div>
+    <p class="svc-note"><strong>A note on scope:</strong> These are educational and supportive consultations. They do not include diagnosis, prescriptions, or treatment, and are not a substitute for care from a licensed provider where you live.</p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="wrap approach">
+    <div>
+      <div class="eyebrow">My approach</div>
+      <h2 class="title">What working together feels like</h2>
+      <p class="intro-lead">No rushed visits. We move at a pace that respects your story, your culture, and your goals.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div><h3>We start with understanding</h3><p>A thorough first conversation about your history, what you're experiencing, and what you're hoping for.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div><h3>Clarity, in plain language</h3><p>I help you understand what's going on and the options in front of you — without jargon or pressure.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div><h3>Ongoing, flexible support</h3><p>Follow-ups by video, at a rhythm that fits your life. You're never left to figure it out alone.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR ORGANIZATIONS -->
+<section class="orgs" id="orgs">
+  <div class="wrap orgs-grid">
+    <div>
+      <div class="eyebrow">For organizations</div>
+      <h2 class="title">Partner with a bilingual neuropsychiatry expert</h2>
+      <p class="intro-lead">I work with digital-health companies, clinics, and research teams that want clinical depth and authentic Spanish-language expertise — in a non-prescribing, advisory capacity.</p>
+      <a href="#book" class="btn btn-light">Start a conversation</a>
+    </div>
+    <ul class="org-list">
+      <li><span class="bullet"></span><div><span class="ti">Clinical advisory</span><span class="de">Guidance on mental-health products, protocols, and patient experience.</span></div></li>
+      <li><span class="bullet"></span><div><span class="ti">Medical content &amp; review</span><span class="de">Author or review clinical content in Spanish and English for accuracy and tone.</span></div></li>
+      <li><span class="bullet"></span><div><span class="ti">Research collaboration</span><span class="de">Published neuropsychiatry researcher available for study design and review.</span></div></li>
+      <li><span class="bullet"></span><div><span class="ti">Program &amp; care design</span><span class="de">Help shape culturally-attuned care for Spanish-speaking populations.</span></div></li>
+      <li><span class="bullet"></span><div><span class="ti">Bilingual clinical consulting</span><span class="de">A trusted voice for teams serving Latino and bilingual communities.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">In their words</div>
+    <h2 class="title">Trusted by the people she works with</h2>
+    <div class="rev-grid">
+      <div class="rev"><div class="stars">★★★★★</div><p>"Professional without losing human empathy. I left completely reassured and finally understood what was happening."</p><div class="who">— Verified review</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"She explained everything in detail and gave me clear options for my situation. Genuinely trustworthy."</p><div class="who">— Aldo</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"She helped me understand myself and feel calmer. An essential part of my process."</p><div class="who">— Paola</div></div>
+    </div>
+    <div class="rev-foot">★ 4.9 average across 109 verified reviews from her clinical practice</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="book">
+  <div class="wrap">
+    <div class="final-card">
+      <div class="eyebrow">Begin</div>
+      <h2>Take the first step, today</h2>
+      <p>Book a bilingual consultation by secure video. The first step is often the hardest — I'll make it easy.</p>
+      <a href="#" class="btn btn-primary">Book a consultation</a>
+      <span class="or">Here on behalf of a company or team? <a href="#orgs">Let's talk →</a></span>
+      <small>Online scheduling · Secure video · Response within 24 hours</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="brand">Dr. Paulina Lebrija<i style="color:var(--clay)">.</i></div>
+        <p style="margin-top:10px">Bilingual mental-health guidance &amp; consulting<br>San Francisco Bay Area · Online nationwide</p>
+      </div>
+      <div class="links">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#book">Book</a>
+        <a href="#orgs">For organizations</a>
+      </div>
+    </div>
+    <hr class="foot-rule">
+    <p class="foot-fine">© 2026 Dr. Paulina Lebrija Reyes, MD. Dr. Lebrija is licensed in Mexico and provides educational and supportive consultations and professional advisory services in the United States in a non-prescribing capacity. These services do not constitute medical diagnosis, treatment, or a doctor–patient relationship, and are not a substitute for care from a licensed provider in your location. If you are experiencing a medical emergency, call 911 or your local emergency number.</p>
+  </div>
+</footer>
+</body>
+</html>
